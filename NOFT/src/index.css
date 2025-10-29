@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary: #1a365d;
+  --secondary: #2d3748;
+  --accent: #3182ce;
+  --light: #f7fafc;
+  --gray: #e2e8f0;
+  --dark-gray: #4a5568;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
