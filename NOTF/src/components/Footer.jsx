@@ -26,7 +26,7 @@ const Footer = () => {
             <ul>
               <li><a href="#">Directory & Atlas</a></li>
               <li><a href="#">Playbooks & Toolkits</a></li>
-              <li><a href="#">Marketplace of Offerings</a></li>
+              <li><a href="#">Resources</a></li>
               <li><a href="#">Cadence Calls</a></li>
               <li><a href="#">Convenings</a></li>
             </ul>

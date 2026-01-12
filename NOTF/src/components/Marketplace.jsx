@@ -32,7 +32,7 @@ const Marketplace = () => {
   return (
     <section className="marketplace">
       <div className="container">
-        <h2 className="section-title">Marketplace of Offerings</h2>
+        <h2 className="section-title">Resources</h2>
         <div className="resource-filters">
           <button>All Resources</button>
           <button>Toolkits</button>
