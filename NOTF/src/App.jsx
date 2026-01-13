@@ -20,6 +20,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      
       <About />
       <Approach />
       <NeighbourhoodMap />
@@ -33,7 +34,7 @@ function App() {
       
       
       {/* <Events />
-  <Dashboard />
+  
      <Marketplace /> 
      <PartnerDirectory />
      <Principles /> 
