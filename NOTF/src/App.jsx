@@ -20,18 +20,24 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <Dashboard />
+      <NeighbourhoodMap />
       <About />
       <Approach />
-      <NeighbourhoodMap />
-      <Events />
+      <Stories />
       <Join />
+      <Footer />
+      <Dashboard />
+      
+      
+      
+      <Events />
+      
       <Marketplace />
       <PartnerDirectory />
       <Principles />
-      <Stories />
+      
       <FAQ />
-      <Footer />
+      
     </div>
   )
 }
