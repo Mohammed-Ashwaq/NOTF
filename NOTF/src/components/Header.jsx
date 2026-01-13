@@ -16,7 +16,7 @@ const Header = () => {
           <li><a href="#approach">APPROACH</a></li>
           <li><a href="#join">JOIN</a></li>
           <li><a href="partnerdirectory">PARTNERSHIPS</a></li>
-          <li><a href="#principles">PRINCIPLES</a></li>
+          {/* <li><a href="#principles">PRINCIPLES</a></li> */}
         </ul>
         <div className="language-selector">
           <i className="fas fa-globe"></i>
