@@ -215,9 +215,29 @@ header {
 
 .about-features {
   display: grid;
-  grid-template-columns: 1fr;
   gap: clamp(15px, 3vw, 25px);
 }
+
+/* Desktop: all cards in one row */
+@media (min-width: 1024px) {
+  .about-features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .about-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile stays single column */
+@media (max-width: 639px) {
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+} 
 
 .feature-card {
   background-color: white;
