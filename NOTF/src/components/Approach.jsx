@@ -14,7 +14,7 @@ const Approach = () => {
           <div className="approach-card">
             <i className="fas fa-users"></i>
             <h3>Swarm the System</h3>
-            <p>When diverse actors converge in a neighborhood — each contributing from their entry point — energy compounds. Patterns of possibility emerge, local institutions take notice, and resistant systems begin to shift.</p>
+            <p>When diverse actors converge in a neighborhood each contributing from their entry point energy compounds. Patterns of possibility emerge, local institutions take notice, and resistant systems begin to shift.</p>
           </div>
           <div className="approach-card">
             <i className="fas fa-handshake"></i>

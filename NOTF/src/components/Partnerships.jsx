@@ -30,7 +30,7 @@ const PartnerDirectory = () => {
   return (
     <section className="partner-directory">
       <div className="container">
-        <h2 className="section-title">Partner Directory</h2>
+        <h2 className="section-title">Our Partners</h2>
         <div className="directory-filters">
           <button 
             className={filter === 'all' ? 'active' : ''}
