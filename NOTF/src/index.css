@@ -1,28 +1,262 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* ===============================
+   DESIGN SYSTEM – NOTF
+================================ */
 :root {
-  --primary: #1a365d;
-  --secondary: #2d3748;
-  --accent: #3182ce;
-  --light: #f7fafc;
-  --gray: #e2e8f0;
-  --dark-gray: #4a5568;
+  /* Olive palette */
+  --olive-50:  #f4f4ee;   /* very light background */
+  --olive-100: #D7D6C2;   /* light sage */
+  --olive-400: #616247;   /* olive */
+  --olive-900: #1C1C1A;   /* dark olive */
+
+  /* Gradients */
+  --olive-gradient: linear-gradient(
+    135deg,
+    var(--olive-900) 0%,
+    var(--olive-400) 45%,
+    var(--olive-100) 100%
+  );
+
+  --olive-gradient-soft: linear-gradient(
+    180deg,
+    var(--olive-100),
+    var(--olive-50)
+  );
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(28, 28, 26, 0.06);
+  --shadow-md: 0 12px 28px rgba(28, 28, 26, 0.12);
 }
 
+/* ===============================
+   GLOBAL LAYOUT
+================================ */
 body {
-  background-color: var(--light);
-  color: var(--secondary);
+  background: var(--olive-50);
+  color: var(--olive-900);
   line-height: 1.6;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
+section {
+  padding: 100px 0;
+}
+
+/* ===============================
+   HEADER
+================================ */
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--olive-900);
+}
+
+.nav-menu a {
+  color: var(--olive-400);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: var(--olive-900);
+}
+
+/* ===============================
+   HERO (TEXT ONLY)
+================================ */
+.hero {
+  min-height: 100vh;
+  background: var(--olive-gradient);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  max-width: 720px;
   margin: 0 auto;
-  padding: 0 20px;
+  opacity: 0.9;
+}
+
+.hero-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  background: white;
+  color: var(--olive-900);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  background: var(--olive-100);
+}
+
+.hero-btn.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* ===============================
+   SECTION TITLES
+================================ */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--olive-900);
+  margin-bottom: 60px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: var(--olive-400);
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+/* ===============================
+   ABOUT – TEXT FIRST, CARDS BELOW
+================================ */
+.about {
+  background: var(--olive-50);
+}
+
+.about-text {
+  max-width: 720px;
+  margin-bottom: 60px;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-features {
+  display: grid;
+  gap: 25px;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .about-features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .about-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-card {
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.feature-card::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: var(--olive-400);
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   APPROACH / DASHBOARD / MAP
+================================ */
+.approach,
+.dashboard,
+.neighbourhood-map {
+  background: var(--olive-gradient-soft);
+}
+
+/* ===============================
+   JOIN
+================================ */
+.join {
+  background: var(--olive-50);
+}
+
+.join-form {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+}
+
+.form-btn {
+  background: var(--olive-400);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background: var(--olive-900);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  background: var(--olive-900);
+  color: var(--olive-100);
+  padding: 80px 0 40px;
+}
+
+.footer-bottom {
+  text-align: center;
+  opacity: 0.7;
 }

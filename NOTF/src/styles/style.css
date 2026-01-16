@@ -95,18 +95,11 @@ header {
 ================================ */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(    
-    135deg,
-    #1C1C1A 0%,
-    #616247 45%,
-    #D7D6C2 100%
-  );
+  background: var(--olive-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  text-align: center;
-  outline: 6px solid red !important;
 }
 
 .hero-inner {
@@ -118,16 +111,12 @@ header {
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-size: clamp(2.2rem, 4vw, 3rem);
   font-weight: 700;
-  margin-bottom: 1.5;
-  color: #ffffff;
 }
 
 .hero p {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
-  max-width: 720px;
-  margin: 0 auto;
   opacity: 0.9;
 }
 
@@ -140,18 +129,12 @@ header {
 }
 
 .hero-btn {
- padding: 0.8rem 1.6rem;
-  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
-  background: #ffffff;
-  color: #1C1C1A;
-  transition: all 0.3s ease;
-}
-
-.hero-btn:hover {
-  transform: translateY(-2px);
-  background: #f0f0ea;
+  background: white;
+  color: var(--olive-dark);
 }
 
 .hero-btn.secondary {
@@ -159,7 +142,6 @@ header {
   border: 2px solid white;
   color: white;
 }
-
 
 .hero-image img {
   width: 100%;
@@ -215,48 +197,10 @@ header {
   grid-template-columns: 1fr;
   gap: 50px;
 }
-.about-text {
-  max-width: 720px;
-  margin-bottom: 60px;
-}
 
-.about-text h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: var(--olive-dark);
-}
-
-.about-text p {
-  margin-bottom: 16px;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-/* Cards */
-.about-features {
-  display: grid;
-  gap: 25px;
-  
-}
-
-/* Desktop: 4 cards in a row */
-@media (min-width: 1024px) {
-  .about-features {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Tablet */
-@media (min-width: 640px) and (max-width: 1023px) {
-  .about-features {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 639px) {
-  .about-features {
-    grid-template-columns: 1fr;
+@media (min-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr 2fr;
   }
 }
 
@@ -402,4 +346,3 @@ footer {
   margin-top: 40px;
   opacity: 0.7;
 }
-
